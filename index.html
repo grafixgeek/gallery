@@ -16,13 +16,25 @@ title: Home page
   {% for post in site.posts %}
   <div class="col-3">
    
+<div class="card" >
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> : {{post.fruit}}</h5>
+    <p class="card-text"> {{ post.content }}</p>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">{{ post.title }}</a>
+  </div>
+</div>
 
+
+
+<!--
+    
       <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> : {{post.fruit}}</h2>
 
       <div class="entry">
         {{ post.content }}
       </div>
-    
+    -->
   </div>
   {% endfor %}
 </div>
