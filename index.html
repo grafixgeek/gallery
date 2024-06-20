@@ -8,6 +8,7 @@ title: Home page
 
 <div class="row">
   {% for post in site.posts %}
+  {% if page.fruit == fig %}
   <div class="col-12 col-sm-4">
    
 <div class="card" >
@@ -21,5 +22,6 @@ title: Home page
 
 
   </div>
+  {% endif %}
   {% endfor %}
 </div>
