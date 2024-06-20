@@ -4,3 +4,16 @@ title: index title
 ---
 <h1>This is the heading of my gallery</h1>
 <p>Now using Jekyll via Github Actions. A new edit</p>
+
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+
+      <div class="entry">
+        {{ post.content }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
