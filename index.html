@@ -7,15 +7,15 @@ title: index title
 
 <div class="row">
   {% for post in site.posts %}
-  <div class="row">
-    <article class="col-3">
+  <div class="col-3">
+   
 
       <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> : {{post.fruit}}</h2>
 
       <div class="entry">
         {{ post.content }}
       </div>
-    </article>
+    
   </div>
   {% endfor %}
 </div>
