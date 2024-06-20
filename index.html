@@ -5,7 +5,7 @@ title: Home page
 <h1>This is the heading of my gallery</h1>
 <p>Introductory text goes here</p>
 
-
+<h2>Cows</h2>
 <div class="row">
   {% for post in site.posts %}
   {% if post.category == "cows" %}
@@ -24,4 +24,26 @@ title: Home page
   </div>
   {% endif %}
   {% endfor %}
+
+
+<h2>Pivots</h2>
+<div class="row">
+  {% for post in site.posts %}
+  {% if post.category == "pivots" %}
+  <div class="col-12 col-sm-4">
+   
+<div class="card" >
+  <a href="/gallery/assets/images/{{post.image}}"><img class="card-img-top" src="/gallery/assets/images/{{post.thumb}}" alt="Card image"></a>
+  <div class="card-body">
+    <h5 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> : {{post.fruit}}</h5>
+    <p class="card-text"> {{ post.content }}</p>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">{{ post.title }}</a>
+  </div>
+</div>
+
+
+  </div>
+  {% endif %}
+  {% endfor %}
+  
 </div>
